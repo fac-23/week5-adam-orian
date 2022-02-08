@@ -6,6 +6,7 @@ As a user, I want to...
 - Type a pokemon name to choose / click a button to generate random pokemon
 - Use my right and left arrow keys to move my pokemon across the screen
 - Avoid enemy pokemons that are moving across the screen
+- See my health points displayed (decrease if pokemon is hit by enemies)
 
 Stretch / ideas:
 - Display timer clock?
