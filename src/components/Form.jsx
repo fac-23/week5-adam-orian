@@ -11,8 +11,10 @@ function Form({ pokemonName, setPokemonName }) {
 		<form
 			onSubmit={(event) => {
 				event.preventDefault();
-				setPokemonName(event.target.pokemonName.value);
+				const userInput = event.target.pokemonName.value;
+				setPokemonName(userInput.toLowerCase());
 				// hide the form and reveal game
+				event.target.classList.add("hide");
 			}}
 		>
 			<label htmlFor="username">
