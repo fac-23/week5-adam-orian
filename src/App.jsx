@@ -1,13 +1,15 @@
-import React from 'react'
+import React from "react";
+import Form from "./components/Form.jsx";
 
 function App() {
-  // const [count, setCount] = React.useState(0)
-
-  return (
-    <div className="App">
-      Hello
-    </div>
-  )
+	const [pokemonName, setPokemonName] = React.useState(null);
+  console.log(pokemonName);
+	return (
+		<div>
+			<Form pokemonName={pokemonName} setPokemonName={setPokemonName}/>
+			{pokemonName}
+		</div>
+	);
 }
 
-export default App
+export default App;
