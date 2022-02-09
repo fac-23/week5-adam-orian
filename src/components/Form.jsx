@@ -12,6 +12,7 @@ function Form({ pokemonName, setPokemonName }) {
 			onSubmit={(event) => {
 				event.preventDefault();
 				setPokemonName(event.target.pokemonName.value);
+				// hide the form and reveal game
 			}}
 		>
 			<label htmlFor="username">
