@@ -1,4 +1,5 @@
 import React from "react";
+// import Enemy from "./Enemy";
 
 // form with:
 // username input
@@ -6,13 +7,14 @@ import React from "react";
 // button to generate random pokemon
 
 // eslint-disable-next-line no-unused-vars
-function Form({ pokemonName, setPokemonName }) {
+function Form({ pokemonName, setPokemonName, setNum }) {
 	return (
 		<form
 			onSubmit={(event) => {
 				event.preventDefault();
 				const userInput = event.target.pokemonName.value;
 				setPokemonName(userInput.toLowerCase());
+				setNum(Math.floor(Math.random() * 100))
 				// hide the form and reveal game
 				event.target.classList.add("hide");
 			}}
