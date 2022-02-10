@@ -6,7 +6,9 @@ import Enemy from "./components/Enemy.jsx";
 function App() {
 	const [pokemonName, setPokemonName] = React.useState(null);
 	const [num, setNum] = React.useState(null);
+
 	// console.log(pokemonName);
+
 	return (
 		<div>
 			<Form
@@ -14,9 +16,8 @@ function App() {
 				setPokemonName={setPokemonName}
 				setNum={setNum}
 			/>
+			<Enemy num={num} />
 			<Pokemon name={pokemonName} />
-			<Enemy num={num} />
-			<Enemy num={num} />
 		</div>
 	);
 }

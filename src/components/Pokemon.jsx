@@ -6,8 +6,8 @@ import Move from "./Move";
 
 function Pokemon({ name }) {
 	const [sprite, setSprite] = React.useState(null);
-	const [x, setX] = React.useState(50);
-	const [y, setY] = React.useState(0);
+	const [playerX, setX] = React.useState(50);
+	const [playerY, setY] = React.useState(0);
 	const [translate, setTranslate] = React.useState("translate(-50%, -50%)");
 
 	React.useEffect(() => {
@@ -29,15 +29,15 @@ function Pokemon({ name }) {
 					className="sprite"
 					src={sprite}
 					style={{
-						bottom: y + "vh",
-						left: x + "vw",
+						bottom: playerY + "vh",
+						left: playerX + "vw",
 						transform: translate,
 					}}
 				/>
 				<Move
-					x={x}
+					playerX={playerX}
 					setX={setX}
-					y={y}
+					playerY={playerY}
 					setY={setY}
 					translate={translate}
 					setTranslate={setTranslate}
