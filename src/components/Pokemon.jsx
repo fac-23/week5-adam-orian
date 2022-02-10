@@ -1,14 +1,11 @@
 import React from "react";
-import Move from "./Move";
 
 // fetch pokemon by name
 // display sprite on page
 
-function Pokemon({ name }) {
+function Pokemon({ name, playerX, playerY, translate }) {
 	const [sprite, setSprite] = React.useState(null);
-	const [playerX, setX] = React.useState(50);
-	const [playerY, setY] = React.useState(0);
-	const [translate, setTranslate] = React.useState("translate(-50%, -50%)");
+	
 
 	React.useEffect(() => {
 		console.log("fetching");
@@ -34,14 +31,7 @@ function Pokemon({ name }) {
 						transform: translate,
 					}}
 				/>
-				<Move
-					playerX={playerX}
-					setX={setX}
-					playerY={playerY}
-					setY={setY}
-					translate={translate}
-					setTranslate={setTranslate}
-				/>
+				
 			</div>
 		);
 	}
