@@ -1,9 +1,12 @@
 import React from "react";
 // import Pokemon from "./Pokemon";
 
-function Move({ x, setX, y, setY, translate, setTranslate }) {
+function Move({ playerX, setX, playerY, setY, enemyX, enemyY }) {
+	// const [collision, setCollision] = React.useState(false);
+
 	React.useEffect(() => {
 		console.log("moving");
+
 		function handleKeyDown(event) {
 			if (event.key === "ArrowUp") {
 				setY((prevY) => prevY + 2);
@@ -18,6 +21,14 @@ function Move({ x, setX, y, setY, translate, setTranslate }) {
 				setX((prevX) => prevX - 2);
 			}
 		}
+
+		// console.log("enemyX", enemyX);
+
+		// const enemyRange = enemyX + 10;
+		// if (playerX >= enemyX || playerX <= enemyRange) {
+		// 	setCollision(true);
+		// 	console.log(collision);
+		// }
 
 		window.addEventListener("keydown", handleKeyDown);
 	}, []);

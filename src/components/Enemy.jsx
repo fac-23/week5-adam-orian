@@ -1,4 +1,5 @@
 import React from "react";
+// import Move from "./Move";
 
 // fetch sprite
 // make enemy move left and right across screen
@@ -6,7 +7,9 @@ import React from "react";
 // const num = getRandomNum();
 
 function Enemy({ num }) {
-	console.log(num);
+	const [enemyX, setX] = React.useState(50);
+	const [enemyY, setY] = React.useState(0);
+
 	const [sprite, setSprite] = React.useState(null);
 
 	React.useEffect(() => {
@@ -18,10 +21,32 @@ function Enemy({ num }) {
 			});
 	}, [num]);
 
+	React.useEffect(() => {
+		setInterval(() => {
+			setX((prevX) => {
+				if (prevX === 80) {
+					prevX = 0;
+				}
+				return prevX + 2;
+			});
+		}, 200);
+	}, []);
+
 	if (!sprite) {
 		return <div>Loading...</div>;
 	} else {
-		return <img className="enemy-sprite" src={sprite} />;
+		return (
+			<div>
+				<img
+					className="enemy-sprite"
+					src={sprite}
+					style={{
+						bottom: enemyY + "vh",
+						left: enemyX + "vw",
+					}}
+				/>
+			</div>
+		);
 	}
 }
 

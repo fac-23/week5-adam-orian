@@ -19,3 +19,88 @@ body {
 .hide {
 	display: none;
 }
+
+/* select enemy and apply animation */
+.enemy-sprite {
+	/* animation-name: enemy-x;
+	animation-duration: 3s;
+	animation-iteration-count: infinite; */
+	position: absolute;
+}
+
+.enemy-sprite1 {
+	animation-name: enemy-y;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	position: absolute;
+}
+
+.enemy-sprite2 {
+	animation-name: enemy-bounce;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	position: absolute;
+}
+
+/* animation */
+
+@keyframes enemy-x {
+	0% {
+		left: 0vw;
+		top: 50vh;
+	}
+
+	50% {
+		left: 90vw;
+		top: 50vh;
+	}
+
+	100% {
+		left: 0vw;
+		top: 50vh;
+	}
+}
+
+@keyframes enemy-y {
+	0% {
+		left: 40vw;
+		top: 0vh;
+	}
+
+	50% {
+		left: 40vw;
+		top: 80vh;
+	}
+
+	100% {
+		left: 40vw;
+		top: 0vh;
+	}
+}
+
+@keyframes enemy-bounce {
+	0% {
+		left: 0vw;
+		top: 50vh;
+	}
+
+	25% {
+		left: 50vw;
+		top: 0vh;
+	}
+
+	50% {
+		left: 80vw;
+		top: 50vh;
+	}
+
+	75% {
+		left: 50vw;
+		top: 80vh;
+	}
+
+	100% {
+		left: 0vw;
+		top: 50vh;
+	}
+}
