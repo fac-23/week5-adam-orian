@@ -6,10 +6,7 @@ import React from "react";
 // make a collision function to track positions of enemy and pokemon
 // const num = getRandomNum();
 
-function Enemy({ num }) {
-	const [enemyX, setX] = React.useState(50);
-	const [enemyY, setY] = React.useState(0);
-
+function Enemy({ num, enemyX, enemyY, setEnemyX }) {
 	const [sprite, setSprite] = React.useState(null);
 
 	React.useEffect(() => {
@@ -23,7 +20,7 @@ function Enemy({ num }) {
 
 	React.useEffect(() => {
 		setInterval(() => {
-			setX((prevX) => {
+			setEnemyX((prevX) => {
 				if (prevX === 80) {
 					prevX = 0;
 				}
