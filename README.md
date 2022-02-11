@@ -18,7 +18,3 @@ Stretch / ideas:
 - Shoot something from the pokemon
 - Randomly generated enemies
 - More enemies added to screen as the game continues
-
-GithubCo-authoring:
-- Co-authored-by: Adam <1065348+adam8-9@users.noreply.github.com>
-- Co-authored-by: Orian <77785778+OrianP@users.noreply.github.com>
