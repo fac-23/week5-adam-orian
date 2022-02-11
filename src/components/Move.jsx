@@ -6,8 +6,10 @@ function Move({
 	playerY,
 	setPlayerX,
 	setPlayerY,
-	enemyX,
-	enemyY,
+	enemyLeftX,
+	enemyLeftY,
+	enemyRightX,
+	enemyRightY,
 	collision,
 	setCollision,
 }) {
@@ -36,15 +38,18 @@ function Move({
 	}, []);
 
 	React.useEffect(() => {
-		if (playerX === enemyX && playerY === enemyY) {
+		if (
+			(playerX === enemyLeftX && playerY === enemyLeftY) ||
+			(playerX === enemyRightX && playerY === enemyRightY)
+		) {
 			setCollision(true);
-			console.log("collision!!!!!!!!");
+			alert("collision!!!!!!!!");
 			// end the game visually!
 		}
 
-		console.log("enemyX", enemyX);
-		console.log("playerX", playerX);
-	}, [enemyX, enemyY, playerX, playerY]);
+		console.log("player", playerX, playerY);
+		console.log("enemyLeft", enemyLeftX, enemyLeftY);
+	}, [enemyLeftX, enemyLeftY, playerX, playerY, enemyRightX, enemyRightY]);
 
 	return null;
 }

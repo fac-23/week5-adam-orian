@@ -3,9 +3,8 @@ import React from "react";
 // fetch pokemon by name
 // display sprite on page
 
-function Pokemon({ name, playerX, playerY, translate }) {
+function Pokemon({ name, playerX, playerY }) {
 	const [sprite, setSprite] = React.useState(null);
-	
 
 	React.useEffect(() => {
 		console.log("fetching");
@@ -18,7 +17,7 @@ function Pokemon({ name, playerX, playerY, translate }) {
 	}, [name]);
 
 	if (!sprite) {
-		return <div>Loading...</div>;
+		return null;
 	} else {
 		return (
 			<div className="spriteContainer">
@@ -28,10 +27,8 @@ function Pokemon({ name, playerX, playerY, translate }) {
 					style={{
 						bottom: playerY + "vh",
 						left: playerX + "vw",
-						transform: translate,
 					}}
 				/>
-				
 			</div>
 		);
 	}

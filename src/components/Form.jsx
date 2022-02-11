@@ -14,15 +14,11 @@ function Form({ pokemonName, setPokemonName, setNum }) {
 				event.preventDefault();
 				const userInput = event.target.pokemonName.value;
 				setPokemonName(userInput.toLowerCase());
-				setNum(Math.floor(Math.random() * 100))
+				setNum(Math.floor(Math.random() * 100));
 				// hide the form and reveal game
 				event.target.classList.add("hide");
 			}}
 		>
-			<label htmlFor="username">
-				Username
-				<input type="text" id="username" name="username" />
-			</label>
 			<label htmlFor="pokemonName">
 				Type a Pokemon name
 				<input type="text" id="pokemonName" name="pokemonName" />
