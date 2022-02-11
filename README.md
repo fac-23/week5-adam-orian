@@ -1,4 +1,5 @@
-# Pokemon Racing
+# Pokemon Racer
+Choose a Pokemon. Race it to the finish line and avoid the enemies! 🏁
 
 ### User stories
 
@@ -12,11 +13,10 @@ As a user, I want to...
 
 Stretch / ideas:
 
-- Display timer clock?
+- Display timer clock
 - Shoot something from the pokemon
 - Have the pokemon enemies move across screen
 
-Co-authoring:
-
-Co-authored-by: Adam <1065348+adam8-9@users.noreply.github.com>
-Co-authored-by: Orian <77785778+OrianP@users.noreply.github.com>
+GithubCo-authoring:
+- Co-authored-by: Adam <1065348+adam8-9@users.noreply.github.com>
+- Co-authored-by: Orian <77785778+OrianP@users.noreply.github.com>
