@@ -6,7 +6,15 @@ import React from "react";
 // make a collision function to track positions of enemy and pokemon
 // const num = getRandomNum();
 
-function Enemy({ num, enemyX, enemyY, setEnemyX }) {
+function Enemy({
+	num,
+	enemyLeftX,
+	enemyLeftY,
+	setEnemyLeftX,
+	enemyRightX,
+	enemyRightY,
+	setEnemyRightX,
+}) {
 	const [sprite, setSprite] = React.useState(null);
 
 	React.useEffect(() => {
@@ -20,26 +28,48 @@ function Enemy({ num, enemyX, enemyY, setEnemyX }) {
 
 	React.useEffect(() => {
 		setInterval(() => {
-			setEnemyX((prevX) => {
-				if (prevX === 80) {
-					prevX = 0;
-				}
-				return prevX + 2;
-			});
-		}, 200);
+			if (setEnemyRightX) {
+				setEnemyRightX((prevX) => {
+					if (prevX === 0) {
+						prevX = 80;
+					}
+					return prevX - 2;
+				});
+			}
+
+			if (setEnemyLeftX) {
+				setEnemyLeftX((prevX) => {
+					if (prevX === 80) {
+						prevX = 0;
+					}
+					return prevX + 2;
+				});
+			}
+		}, 50);
 	}, []);
 
 	if (!sprite) {
-		return <div>Loading...</div>;
+		return null;
 	} else {
-		return (
+		return enemyLeftX ? (
 			<div>
 				<img
 					className="enemy-sprite"
 					src={sprite}
 					style={{
-						bottom: enemyY + "vh",
-						left: enemyX + "vw",
+						bottom: enemyLeftY + "vh",
+						left: enemyLeftX + "vw",
+					}}
+				/>
+			</div>
+		) : (
+			<div>
+				<img
+					className="enemy-sprite"
+					src={sprite}
+					style={{
+						bottom: enemyRightY + "vh",
+						left: enemyRightX + "vw",
 					}}
 				/>
 			</div>

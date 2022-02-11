@@ -2,9 +2,6 @@ body {
 	margin: 0;
 	background-color: aquamarine;
 	height: 100vh;
-	/* display: flex;
-	align-items: flex-end;
-	justify-content: center; */
 }
 
 .sprite-container {
@@ -14,6 +11,7 @@ body {
 
 .sprite {
 	position: absolute;
+	border: 1px solid black;
 }
 
 .hide {
@@ -26,6 +24,7 @@ body {
 	animation-duration: 3s;
 	animation-iteration-count: infinite; */
 	position: absolute;
+	border: 1px solid black;
 }
 
 .enemy-sprite1 {
@@ -40,6 +39,12 @@ body {
 	animation-duration: 3s;
 	animation-iteration-count: infinite;
 	position: absolute;
+}
+
+form {
+	width: 40%;
+	margin: 0 auto;
+	padding-top: 40vh;
 }
 
 /* animation */
