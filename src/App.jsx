@@ -7,11 +7,12 @@ import Move from "./components/Move.jsx";
 function App() {
 	const [pokemonName, setPokemonName] = React.useState(null);
 	const [num, setNum] = React.useState(null);
-	const [playerX, setPlayerX] = React.useState(50);
+	const [playerX, setPlayerX] = React.useState(0);
 	const [playerY, setPlayerY] = React.useState(0);
-	const [translate, setTranslate] = React.useState("translate(-50%, -50%)");
+	// const [translate, setTranslate] = React.useState("translate(-50%, -50%)");
 	const [enemyX, setEnemyX] = React.useState(50);
-	const [enemyY, setEnemyY] = React.useState(0);
+	const [enemyY, setEnemyY] = React.useState(50);
+	const [collision, setCollision] = React.useState(false);
 
 	// console.log(pokemonName);
 
@@ -31,8 +32,8 @@ function App() {
 			/>
 			<Pokemon
 				name={pokemonName}
-				translate={translate}
-				setTranslate={setTranslate}
+				// translate={translate}
+				// setTranslate={setTranslate}
 				playerX={playerX}
 				playerY={playerY}
 			/>
@@ -45,6 +46,8 @@ function App() {
 				enemyY={enemyY}
 				setEnemyX={setEnemyX}
 				setEnemyY={setEnemyY}
+				collision={collision}
+				setCollision={setCollision}
 			/>
 		</div>
 	);
