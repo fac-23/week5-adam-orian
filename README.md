@@ -1,6 +1,11 @@
 # Pokemon Racer 🏁
 Choose a Pokemon. Race it to the finish line and avoid the enemies!
 
+### Install and run locally
+- Clone repo
+- Run `npm install`
+- Run `npm run dev`
+
 ### User stories
 
 As a user, I want to...
